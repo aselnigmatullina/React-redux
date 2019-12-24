@@ -1,0 +1,31 @@
+.postsBlock{
+    padding: 10px;
+    text-align: center;
+}
+.posts{
+    margin-top: 10px;
+}
+
+.title{
+    text-align: center;
+    font-family          : 'Cinzel', serif;
+
+}
+.form{
+    width: 500px;
+
+   
+    border-radius: 20px;
+    border: 1px solid rgb(74, 85, 75);
+}
+.helperToDoCenter{
+    text-align: center;
+}
+.buttonForClick{
+    background: rgb(74, 85, 75);
+    padding: 10px;
+    border-radius: 20px;
+    color: #fff;
+    font-family          : 'Cinzel', serif;
+    border: 1px solid #ccc;
+}

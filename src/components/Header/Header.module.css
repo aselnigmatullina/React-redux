@@ -1,0 +1,61 @@
+.header{
+    grid-area            : h;
+    background-color     : #fff;
+    background           : url('https://sun9-17.userapi.com/c543103/v543103831/40c8e/bEdErUYSmdI.jpg') no-repeat;
+    background-size      : cover;
+
+  }
+  
+  .title{
+    font-family          : 'Cinzel', serif;
+    font-size            : 20px;
+    text-align           : center;
+    color                : #ccc;
+    font-weight          : 700;  
+    
+  }
+  .background{
+    background-color     : #fff;
+    width                : 200px;
+    height               : 100px;
+    margin               : 0 auto;
+    border-radius        : 20px;
+  }
+  .brand{
+    font-family          : 'Cinzel', serif;
+    font-size            : 40px;
+    text-align           : center;
+    color                : rgb(167, 154, 154);
+    opacity              : .5;
+  }
+  .text{
+    font-family          : 'Cinzel', serif;
+    font-size            : 10px;
+    text-align           : center;
+    color                : #ccc;
+    font-weight          : 700;
+  }
+  
+
+  .logo{
+    width: 100px;
+    margin-left: 20px;
+  }
+  
+  .loginBlock{
+    float: right;
+    color: #fff;
+  }
+  .btnLogin{
+    padding      : 5px 10px;
+    background   : #fff;
+    border-radius: 10px;
+    margin-top   : 10px;
+    margin-right : 20px;
+    font-family  : 'Cinzel', serif;
+    font-weight  : 700;
+    
+
+    
+
+  }

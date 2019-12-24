@@ -1,0 +1,49 @@
+.dialogs{
+   display              : grid;
+   grid-template-columns: 2fr 10fr;
+   text-decoration: none;
+   color: black;
+}
+
+
+.dialogsItems{
+    padding             : 10px;
+    color               : black;
+    font-size           : 20px;
+    margin-top          : 20px;
+    border: 1px solid #ccc;
+
+}
+
+.messages{
+    padding             : 10px;
+    color               : #ccc;
+
+
+}
+.message{
+    color               : #ccc;
+
+}
+.textarea{
+    padding: 20px;
+    width: 700px;
+    border-radius: 10px;
+}
+.titleForMessages{
+    font-size: 40px;
+}
+.btn{
+    padding: 10px 20px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    background-color: #ccc;
+
+
+}
+.helperToDoCenter{
+    text-align: center;
+    margin-right: 250px;
+    
+
+}

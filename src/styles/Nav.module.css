@@ -1,0 +1,25 @@
+.nav{
+    grid-area            : n;
+    background           : url('https://sun9-29.userapi.com/c543103/v543103831/40c7c/MQg4anI5mPc.jpg') no-repeat;
+    font-family          : 'Cinzel', serif      ;
+    font-size            : 30px                 ;
+    padding              : 20px                 ; 
+  }
+
+
+.item{
+    color                : #ccc              ;
+    text-decoration      : none                ;
+
+  }
+
+.active{
+    color                : #ccc              ;
+
+}
+.active:hover{
+  color                  : rgb(243, 183, 183);
+}
+.musicPng{
+  width                  :  30px               ;
+}
