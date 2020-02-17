@@ -9,9 +9,8 @@ const LoginForm = (props) => {
      <>
      <form onSubmit={props.handleSubmit}>
              {createField("Email", "email", Input, [required])}
-             {createField("Password", "password", Input, [required])}
-             <Field  name={"rememberMe"} component={Input} type={"checkbox"} /> Запомнить меня
-         
+             {createField("Password", "password", Input, [required], {type:"password"})}
+             {createField(null, "rememberMe", Input, [],  {type: "checkbox"}, "Запомнить меня")}     
          <div>
              <button >Login</button>
          </div>
@@ -21,16 +20,10 @@ const LoginForm = (props) => {
 }
 
 const LoginReduxForm = reduxForm({form: 'login'})(LoginForm)
-
-
-
 const Login = (props) => {
-
     const onSubmit = (formData) => {
        console.log(formData)
     }
-    
-
     return(
         <>
         <h1>Login</h1>

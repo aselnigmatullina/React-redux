@@ -5,25 +5,19 @@ import {NavLink}    from 'react-router-dom';
 import * as axios   from 'axios'                          ;
 import { unfollow } from '../API/api';
 import { follow }   from '../API/api';
+import Paginator from './Paginator';
 
 
 
 
-let Users = (props) => {
-    let pagesCount = Math.ceil(props.totalUsersCount / props.pageSize);
-    let pages      = [];
-    for(let i = 1; i < pagesCount; i++){
-           pages.push(i);
-    }
+let Users = ({currentPage, totalUsersCount, pageSize, onPageChanged, ...props}) => {
     return(
             <div>
-                <div>
-                    {pages.map(p => {
-                    return <span className={props.currentPage === p && s.selectedPage}
-                    onClick={e => props.onPageChanged(p)}>{p}</span>
-                    })}
-
-                </div>
+                <Paginator currentPage={currentPage} 
+                           onPageChanged={onPageChanged} 
+                           totalUsersCount={totalUsersCount} 
+                           pageSize={pageSize} 
+                           />
                {
                    props.users.map(u => <div key={u.id}>
                        <span>
