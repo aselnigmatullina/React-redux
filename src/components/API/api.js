@@ -16,14 +16,16 @@ export const getUsers = (currentPage = 1, pageSize = 10) => {
     .then(response => response.data);
     
 }
-export const unfollow = (id) => {
-    return instance.delete(`follow/${id}`)
+export const unfollow = (userId) => {
+    return instance.delete(`follow/${userId}`)
     .then(response => response.data)  
 }
 
-export const follow = (id) => {
-    return instance.post(`follow/${id}`, {})
+export const follow = (userId) => {
+    return instance.post(`follow/${userId}`, {})
     .then(response => response.data)
 }
+
+
 
 

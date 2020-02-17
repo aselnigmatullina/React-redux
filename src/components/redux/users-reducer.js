@@ -1,3 +1,5 @@
+import { updateObjectInArray } from "../../utils/validators/helper";
+
 const FOLLOW                = 'FOLLOW';
 const UNFOLLOW              = 'UNFOLLOW';
 const SET_USERS             = 'SET-USERS';
@@ -20,13 +22,9 @@ let initialState = {
 }
 
 const usersReducer = (state = initialState, action) => {
-    switch(action.type){
-        case FOLLOW:   return {...state,users: state.users.map(u => {
-                       if(u.id === action.userId ){return {...u, followed: true}}
-                       return u})}
-        case UNFOLLOW: return {...state,users: state.users.map(u => {
-                       if(u.id === action.userId){return {...u,followed: false,}}
-                       return u})}
+    switch(action.type){ 
+        case FOLLOW:   return {...state, users: updateObjectInArray(state.users, action.userId, "id", {followed:true})}
+        case UNFOLLOW: return {...state, users: updateObjectInArray(state.users, action.userId, "id", {followed:false})}
         case SET_USERS                   : return {...state,users: action.users} 
         case SET_CURRENT_PAGE            : return {...state,currentPage: action.currentPage}
         case SET_TOTAL_USERS_COUNT       : return {...state,totalUsersCount: action.count}
@@ -44,4 +42,15 @@ export const setCurrentPage     = (currentPage)     => ({type: SET_CURRENT_PAGE,
 export const setTotalUsersCount = (totalUsersCount) => ({type: SET_TOTAL_USERS_COUNT, count: totalUsersCount})
 export const toggleIsFetching   = (isFetching)      => ({type: TOGGLE_IS_FETCHING, isFetching })
 export const toggleFollowingProgress = (isFetching) => ({type: TOGGLE_IS_FOLLOWING_PROGRESS, isFetching})
+
+export const getUsers = (currentPage, pageSize) => {
+    return   async (dispatch) => {
+       dispatch(toggleIsFetching(true));
+       let data = await getUsers(currentPage, pageSize)
+              dispatch(toggleIsFetching(false));
+              dispatch(setUsers(data.items));
+              dispatch(setTotalUsersCount(data.totalCount));
+}
+}
+
 export default usersReducer;

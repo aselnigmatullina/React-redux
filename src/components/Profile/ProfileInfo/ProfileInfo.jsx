@@ -1,5 +1,7 @@
-import React from 'react'
-import s from './../ProfileInfo/ProfileInfo.module.css';
+import React from 'react';
+import s from './../ProfileInfo/ProfileInfo.module.css'  ;
+import ProfileStatus from './ProfileStatus/ProfileStatus';
+import ProfileStatusWithHooks from './ProfileStatus/ProfileStatusWithHooks';
 
 
 
@@ -14,6 +16,8 @@ const ProfileInfo = (props) => {
          </div>
         <div className={s.descriptionBlock}>
             <img src={props.profile.photos.large} />
+
+            <ProfileStatusWithHooks />
           
         <div className={s.сollage}>
         <img className={s.collageImg} src='https://sun9-11.userapi.com/c543103/v543103831/40c85/k7YHj4wZpZk.jpg' alt="" width='200'/>
